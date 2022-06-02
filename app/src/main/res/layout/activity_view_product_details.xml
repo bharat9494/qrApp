@@ -1,0 +1,920 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.ViewProductDetailsActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ProgressBar
+            android:id="@+id/progressLoader"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:indeterminateTint="#E53935"
+            android:layout_gravity="center" />
+
+        <LinearLayout
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.card.MaterialCardView
+                app:cardCornerRadius="10dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/appOrange"
+                app:cardBackgroundColor="#ffffff"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:padding="10dp"
+                        android:textAlignment="center"
+                        android:background="@drawable/button_bg"
+                        android:textColor="#ffffff"
+                        android:text="Details"
+                        android:layout_marginBottom="10dp"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewQcIdLabel"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text="Id"
+                        android:paddingVertical="2dp"
+                        android:paddingHorizontal="5dp"
+                        android:background="#dddddd"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewQcIdValue"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text=""
+                        android:paddingHorizontal="5dp"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewUserIdLabel"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text="User id"
+                        android:paddingVertical="2dp"
+                        android:paddingHorizontal="5dp"
+                        android:background="#dddddd"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewUserIdValue"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text=""
+                        android:paddingHorizontal="5dp"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewTypeIdLabel"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text="Type id"
+                        android:paddingVertical="2dp"
+                        android:paddingHorizontal="5dp"
+                        android:background="#dddddd"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewTypeIdValue"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text=""
+                        android:paddingHorizontal="5dp"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewDateLabel"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text="Date"
+                        android:paddingVertical="2dp"
+                        android:paddingHorizontal="5dp"
+                        android:background="#dddddd"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewDateValue"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text=""
+                        android:paddingHorizontal="5dp"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewFirstNameLabel"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text="First name"
+                        android:paddingVertical="2dp"
+                        android:paddingHorizontal="5dp"
+                        android:background="#dddddd"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewFirstNameValue"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text=""
+                        android:paddingHorizontal="5dp"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewTypeMasterName"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text="Type name"
+                        android:paddingVertical="2dp"
+                        android:paddingHorizontal="5dp"
+                        android:background="#dddddd"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewTypeMasterNameValue"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text=""
+                        android:paddingHorizontal="5dp"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                app:cardCornerRadius="10dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/appOrange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutChemicalData"
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textviewChemicalDataLabel"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:padding="10dp"
+                        android:textAlignment="center"
+                        android:background="@drawable/button_bg"
+                        android:textColor="#ffffff"
+                        android:text="Chemical data"
+                        android:layout_marginBottom="10dp"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewChemicalTestIdLabel"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text="Chemical test id"
+                        android:paddingVertical="2dp"
+                        android:paddingHorizontal="5dp"
+                        android:background="#dddddd"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewChemicalTestIdValue"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text=""
+                        android:paddingHorizontal="5dp"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewChemicalTestDateLabel"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text="Chemical test date"
+                        android:paddingVertical="2dp"
+                        android:paddingHorizontal="5dp"
+                        android:background="#dddddd"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewChemicalTestDateValue"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text=""
+                        android:paddingHorizontal="5dp"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewProgramLabel"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text="Program"
+                        android:paddingVertical="2dp"
+                        android:paddingHorizontal="5dp"
+                        android:background="#dddddd"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewProgramValue"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text=""
+                        android:paddingHorizontal="5dp"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewSampleLabel"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text="Sample"
+                        android:paddingVertical="2dp"
+                        android:paddingHorizontal="5dp"
+                        android:background="#dddddd"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewSampleValue"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text=""
+                        android:paddingHorizontal="5dp"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewRefAlloyLabel"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text="Ref alloy"
+                        android:paddingVertical="2dp"
+                        android:paddingHorizontal="5dp"
+                        android:background="#dddddd"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewRefAlloyValue"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text=""
+                        android:paddingHorizontal="5dp"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewOperatorLabel"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text="Operator"
+                        android:paddingVertical="2dp"
+                        android:paddingHorizontal="5dp"
+                        android:background="#dddddd"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewOperatorValue"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text=""
+                        android:paddingHorizontal="5dp"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewAnalysisLabel"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text="Analysis"
+                        android:paddingVertical="2dp"
+                        android:paddingHorizontal="5dp"
+                        android:background="#dddddd"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewAnalysisValue"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text=""
+                        android:paddingHorizontal="5dp"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewChemTestDataLabel"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text="Data"
+                        android:paddingVertical="2dp"
+                        android:paddingHorizontal="5dp"
+                        android:background="#dddddd"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewChemTestDataValue"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text=""
+                        android:paddingHorizontal="5dp"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                app:cardCornerRadius="10dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/appOrange"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutPhysicalData"
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textviewPhyDataLabel"
+                        android:background="@drawable/button_bg"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:padding="10dp"
+                        android:textAlignment="center"
+                        android:textColor="#ffffff"
+                        android:layout_marginBottom="10dp"
+                        android:text="Physical data"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewPhyTestIdLabel"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:paddingVertical="2dp"
+                        android:paddingHorizontal="5dp"
+                        android:background="#dddddd"
+                        android:text="Physical test id"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewPhyTestIdValue"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text=""
+                        android:paddingHorizontal="5dp"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewPhyTestDateLabel"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text="Physical test date"
+                        android:paddingVertical="2dp"
+                        android:paddingHorizontal="5dp"
+                        android:background="#dddddd"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewPhyTestDateValue"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text=""
+                        android:paddingHorizontal="5dp"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewSILable"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text="Sample identification"
+                        android:paddingVertical="2dp"
+                        android:paddingHorizontal="5dp"
+                        android:background="#dddddd"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewSIValue"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text=""
+                        android:paddingHorizontal="5dp"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewSTLable"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text="Sample type"
+                        android:paddingVertical="2dp"
+                        android:paddingHorizontal="5dp"
+                        android:background="#dddddd"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewSTValue"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text=""
+                        android:paddingHorizontal="5dp"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewCSALable"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text="C S Area"
+                        android:paddingVertical="2dp"
+                        android:paddingHorizontal="5dp"
+                        android:background="#dddddd"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewCSAValue"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text=""
+                        android:paddingHorizontal="5dp"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewLengthLable"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text="Length"
+                        android:paddingVertical="2dp"
+                        android:paddingHorizontal="5dp"
+                        android:background="#dddddd"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewLengthValue"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text=""
+                        android:paddingHorizontal="5dp"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewWeightLable"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text="Weight"
+                        android:paddingVertical="2dp"
+                        android:paddingHorizontal="5dp"
+                        android:background="#dddddd"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewWeightValue"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text=""
+                        android:paddingHorizontal="5dp"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewOGGLLable"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text="Og gauge len"
+                        android:paddingVertical="2dp"
+                        android:paddingHorizontal="5dp"
+                        android:background="#dddddd"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewOGGLValue"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text=""
+                        android:paddingHorizontal="5dp"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewFGLLable"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text="Final gauge len"
+                        android:paddingVertical="2dp"
+                        android:paddingHorizontal="5dp"
+                        android:background="#dddddd"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewFGLValue"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text=""
+                        android:paddingHorizontal="5dp"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewMaxLoadLable"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text="Max load"
+                        android:paddingVertical="2dp"
+                        android:paddingHorizontal="5dp"
+                        android:background="#dddddd"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewMaxLoadValue"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text=""
+                        android:paddingHorizontal="5dp"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewYieldLoadLable"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text="Yield load"
+                        android:paddingVertical="2dp"
+                        android:paddingHorizontal="5dp"
+                        android:background="#dddddd"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewYieldLoadValue"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text=""
+                        android:paddingHorizontal="5dp"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewDAMLLable"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text="Disp at max load"
+                        android:paddingVertical="2dp"
+                        android:paddingHorizontal="5dp"
+                        android:background="#dddddd"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewDAMLValue"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text=""
+                        android:paddingHorizontal="5dp"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewULTSLable"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text="Ult stress"
+                        android:paddingVertical="2dp"
+                        android:paddingHorizontal="5dp"
+                        android:background="#dddddd"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewULTSValue"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text=""
+                        android:paddingHorizontal="5dp"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewElongLable"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text="Elongation"
+                        android:paddingVertical="2dp"
+                        android:paddingHorizontal="5dp"
+                        android:background="#dddddd"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewElongValue"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text=""
+                        android:paddingHorizontal="5dp"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewYSLable"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text="Yield stress"
+                        android:paddingVertical="2dp"
+                        android:paddingHorizontal="5dp"
+                        android:background="#dddddd"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewYSValue"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text=""
+                        android:paddingHorizontal="5dp"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewUTSYSLable"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text="Uts ys"
+                        android:paddingVertical="2dp"
+                        android:paddingHorizontal="5dp"
+                        android:background="#dddddd"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/textviewUTSYSValue"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text=""
+                        android:paddingHorizontal="5dp"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

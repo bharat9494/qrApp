@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".view.MainActivity">
+
+    <LinearLayout
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="0dp">
+
+        <ImageView
+            android:src="@drawable/logo"
+            android:padding="10dp"
+            android:scaleType="fitXY"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCreateQr"
+            android:text="Create QR"
+            android:padding="20dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            app:icon="@drawable/ic_qr"
+            app:iconGravity="top"
+            android:fontFamily="@font/metropolis_regular"
+            android:layout_marginVertical="10dp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/button_bg"
+            app:backgroundTint="#F57C00"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSavePhy"
+            android:text="Save Physical Test"
+            android:padding="20dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            app:icon="@drawable/ic_add"
+            app:iconGravity="top"
+            android:fontFamily="@font/metropolis_regular"
+            android:layout_marginVertical="10dp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/button_bg"
+            app:backgroundTint="#757575"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSaveChem"
+            android:text="Save Chemical Test"
+            android:padding="20dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            app:icon="@drawable/ic_add"
+            app:iconGravity="top"
+            app:backgroundTint="#F57C00"
+            android:fontFamily="@font/metropolis_regular"
+            android:layout_marginVertical="10dp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/button_bg"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnViewDetails"
+            android:text="View Product Details"
+            android:padding="20dp"
+            android:textSize="16sp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            app:icon="@drawable/ic_view"
+            app:iconGravity="top"
+            app:backgroundTint="#757575"
+            android:fontFamily="@font/metropolis_regular"
+            android:layout_marginVertical="10dp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/button_bg"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

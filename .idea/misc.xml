@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Development/SkQr - Copy/app/src/main/res/layout/activity_create_qr.xml" value="0.25" />
+        <entry key="..\:/Development/SkQr/app/src/main/res/drawable/button_bg.xml" value="0.176" />
+        <entry key="..\:/Development/SkQr/app/src/main/res/drawable/progress_loader.xml" value="0.177" />
+        <entry key="..\:/Development/SkQr/app/src/main/res/font/custom_metropolis_font.xml" value="0.28020833333333334" />
+        <entry key="..\:/Development/SkQr/app/src/main/res/layout/activity_create_qr.xml" value="0.25" />
+        <entry key="..\:/Development/SkQr/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/Development/SkQr/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Development/SkQr/app/src/main/res/layout/activity_save_chemical_test.xml" value="0.25" />
+        <entry key="..\:/Development/SkQr/app/src/main/res/layout/activity_save_physical_test.xml" value="0.2359375" />
+        <entry key="..\:/Development/SkQr/app/src/main/res/layout/activity_view_product_details.xml" value="0.25" />
+        <entry key="..\:/Development/SkQr/app/src/main/res/layout/fragment_date_picker.xml" value="0.25" />
+        <entry key="..\:/Development/SkQr/app/src/main/res/layout/fragment_show_type_master.xml" value="0.25" />
+        <entry key="..\:/Development/SkQr/app/src/main/res/layout/list_item_type_master.xml" value="0.25" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
